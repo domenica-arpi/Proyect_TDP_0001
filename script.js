@@ -76,3 +76,4 @@ document.addEventListener('DOMContentLoaded', () => {
         completedList.style.display = 'block';
     });
 });
+

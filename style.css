@@ -11,16 +11,32 @@ body {
     color: #fff;
     padding: 40px 0;
     text-align: center;
+    animation: welcome-animation 1s ease-in-out;
 }
 
-.welcome-container h1 {
+@keyframes welcome-animation {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.welcome-container .logo {
+    font-size: 48px;
     font-weight: bold;
-    font-size: 36px;
-    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
-.welcome-container p {
-    font-size: 18px;
+.welcome-container .logo i {
+    margin-right: 10px;
+    font-size: 60px;
 }
 
 .arrow-container {
@@ -79,7 +95,7 @@ button {
     cursor: pointer;
     border-radius: 4px;
     font-weight: bold;
-    margin-top: 10px;
+    margin: 10px 5px;
 }
 
 button:hover {
