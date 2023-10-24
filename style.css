@@ -1,19 +1,74 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     text-align: center;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+
+.welcome-container {
+    background-color: #008CBA;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.welcome-container h1 {
+    font-weight: bold;
+    font-size: 36px;
+    margin: 20px 0;
+}
+
+.welcome-container p {
+    font-size: 18px;
+}
+
+.arrow-container {
+    margin-top: 20px;
+}
+
+.arrow {
+    background-color: #008CBA;
+    color: #fff;
+    padding: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.arrow i {
+    font-size: 36px;
+}
+
+.arrow:hover {
+    transform: translateY(10px);
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     color: #333;
+    font-weight: bold;
+    margin: 20px 0;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    margin: 5px 0;
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 10px 0;
 }
 
 button {
@@ -22,16 +77,69 @@ button {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
-}
-
-#addTask {
-    margin-left: 10px;
-}
-
-#showAll, #showPending, #showCompleted {
+    border-radius: 4px;
+    font-weight: bold;
     margin-top: 10px;
 }
 
-#completedList {
+button:hover {
+    background-color: #00506b;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+li:hover {
+    transform: scale(1.02);
+}
+
+button.delete {
+    background-color: #f44336;
+}
+
+button.delete:hover {
+    background-color: #d32f2f;
+}
+
+.completed-task {
+    text-decoration: line-through;
+    color: #777;
+}
+
+.completed-task button {
+    background-color: #f44336;
+    color: #fff;
+}
+
+.completed-task button:hover {
+    background-color: #d32f2f;
+}
+
+.completed-list {
     display: none;
+}
+
+@media (max-width: 768px) {
+    .container {
+        border-radius: 0;
+        box-shadow: none;
+        padding: 10px;
+    }
+
+    ul li {
+        margin: 5px 0;
+    }
 }

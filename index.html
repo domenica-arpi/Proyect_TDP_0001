@@ -3,25 +3,33 @@
 <head>
     <title>Lista de Tareas</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://kit.fontawesome.com/bd0eea510a.js" crossorigin="anonymous">
 </head>
 <body>
-    <h1>Lista de Tareas</h1>
-    <input type="text" id="taskInput" placeholder="Nueva tarea">
-    <button id="addTask">Agregar</button>
+    <div class="welcome-container" id="welcome">
+        <h1>Bienvenido a la Lista de Tareas</h1>
+        <p>Este proyecto te permite gestionar tus tareas de manera eficiente.</p>
+        <div class="arrow-container">
+            <a href="#app">
+                <div class="arrow">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+            </a>
+        </div>
+    </div>
 
-    <h2>Tareas Pendientes</h2>
-    <ul id="todoList">
-        <!-- Aquí se mostrarán las tareas pendientes -->
-    </ul>
-
-    <h2>Tareas Completadas</h2>
-    <ul id="completedList">
-        <!-- Aquí se mostrarán las tareas completadas -->
-    </ul>
-
-    <button id="showPending">Mostrar Pendientes</button>
-    <button id="showCompleted">Mostrar Completadas</button>
-    <button id="showAll">Mostrar Todas</button>
+    <div id="app" class="container">
+        <h1>Lista de Tareas</h1>
+        <input type="text" id="taskInput" placeholder="Agregar una tarea">
+        <button id="addTask">Agregar</button>
+        <ul id="todoList"></ul>
+        <ul id="completedList" class="completed-list"></ul>
+        <div id="buttons">
+            <button id="showAll">Mostrar Todas</button>
+            <button id="showPending">Mostrar Pendientes</button>
+            <button id="showCompleted">Mostrar Completadas</button>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
